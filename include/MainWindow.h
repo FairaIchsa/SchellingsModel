@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <iostream>
+#include <string>
 
 #include "window.h"
 #include "button.h"
@@ -19,6 +20,12 @@ enum ButtonEvents{
     Decrease_ratio
 };
 
+enum WindowState{
+    Unpaused,
+    Paused
+};
+WindowState& operator++(WindowState& st, int);
+
 class MainWindow : public Window
 {
 public:
@@ -27,6 +34,9 @@ public:
 
     void OnCreate();
     void OnSizeChanged();
+
+    void DrawStats(Context *cr);
+    void DrawHelp(Context *cr);
 
     void DrawSquare(Context *cr, int i, int j);
     void DrawGrid(Context *cr);
@@ -39,11 +49,13 @@ public:
 
     bool OnTimeout();
 
+    std::string get_str_pause();
+
 private:
     RGB Colors[3];
     Grid* Grid_;
-    uint16_t upper_padding, padding, sq_side;
-    bool pause;
+    uint16_t upper_padding, lower_padding, side_padding, sq_side;
+    WindowState pause;
     int tolerance;
 };
 

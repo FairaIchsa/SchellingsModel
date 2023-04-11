@@ -7,7 +7,6 @@ enum State{
     Second = 2
 };
 const int Num_states = 3;
-
 State& operator++(State& st, int);
 
 enum Happiness{

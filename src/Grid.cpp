@@ -2,7 +2,7 @@
 
 Grid* Grid::instance_ptr = nullptr;
 
-Grid::~Grid(){delete instance_ptr;}
+Grid::~Grid(){}
 
 Grid::Grid(double ratio_){
     ratio = ratio_;
