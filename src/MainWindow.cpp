@@ -96,8 +96,8 @@ void MainWindow::DrawHelp(Context *cr){
     cr->Text("Free", "arial", 20, Point(100, height-70), 0x0);
     cr->Text("First", "arial", 20, Point(200, height-70), 0x0);
     cr->Text("Second", "arial", 20, Point(300, height-70), 0x0);
-    cr->Text("Unhappy", "arial", 20, Point(400, height-70), 0x0);
-    cr->Text("Happy", "arial", 20, Point(500, height-70), 0x0);
+    cr->Text("Happy", "arial", 20, Point(400, height-70), 0x0);
+    cr->Text("Unhappy", "arial", 20, Point(500, height-70), 0x0);
 
     cr->SetLineWidth(2);
 
